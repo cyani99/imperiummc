@@ -4,9 +4,6 @@ function App() {
   return (
     <div className="App">
       <Menu></Menu>
-      <header className="App-header">
-        header
-      </header>
       <main className='App-main'>
         main
       </main>
