@@ -1,15 +1,11 @@
+import Main from "./components/Main/Main";
 import Menu from "./components/Menu/Menu";
 
 function App() {
   return (
-    <div className="App">
+    <div className="h-screen">
       <Menu></Menu>
-      <main className='App-main'>
-        main
-      </main>
-      <footer className='App-footer'>
-        footer
-      </footer>
+      <Main></Main>
     </div>
   );
 }

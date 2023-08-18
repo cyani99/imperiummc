@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body{
     background-image: url('../static/img/background.png');
     background-color: black;
@@ -15,7 +16,12 @@ body{
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color:white;
+    height: 100%
 } 
+html{
+    height: 100%
+}
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
