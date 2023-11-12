@@ -3,9 +3,8 @@ import player from "../../../static/img/body.png"
 function WelcomeImage(){
 
     return(
-        <div className="basis-1/3">
+        <div className="flex w-fit justify-start">
             <img className="h-40" src={player}></img>
-        
         </div>
     )
 }
