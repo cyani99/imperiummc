@@ -7,11 +7,11 @@ function Menu() {
 
     let menu = <img className=" fixed m-4" src={burgerMenuIcon} onClick={() => { setShowMenu(!showMenu) }} alt="burger menu"></img>;
     if (showMenu) {
-        menu = <div onClick={() => { setShowMenu(!showMenu) }} className="w-3/5 h-full fixed bg-blue-200">
-            <ul>
-                <li><a href="#a">Start</a></li>
-                <li><a href="#b">Sklep</a></li>
-                <li><a href="#c">Zaglosuj</a></li>
+        menu = <div onClick={() => { setShowMenu(!showMenu) }} className="w-full h-full fixed bg-purple-2">
+            <ul className="p-4">
+                <li className="p-2"><a className="text-4xl px-4 border-b-2" href="#a">Start</a></li>
+                <li className="p-2"><a className="text-4xl px-4 border-b-2" href="#a">Sklep</a></li>
+                <li className="p-2"><a className="text-4xl px-4 border-b-2" href="#a">Zagłosuj</a></li>
             </ul>
         </div>;
     }

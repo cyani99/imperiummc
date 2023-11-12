@@ -1,4 +1,4 @@
-import logo from "../../static/img/imperium2-logo.png"
+import logo from "../../static/img/logo.png"
 function Logo(){
 
     return(
