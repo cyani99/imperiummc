@@ -13,19 +13,19 @@ function Main(){
             <div className="flex items-center justify-center ">
                 <div className="flex justify-center basis-1/3 max-lg:hidden">
                     <div className="mr-4">
-                        <div className="font-bold text-lg text-purple-2">0 GRACZY ONLINE</div>
+                        <div className="font-bold text-lg text-purple-2">13 GRACZY ONLINE</div>
                         <div className="flex justify-end">IP: STYLOWAMC.PL</div>
                     </div>
                     <GiConsoleController color="#D4ADFC" size="54px"/>
                 </div>
                 <Logo/>
-                <div className="flex justify-center basis-1/3 max-lg:hidden">
+                <a href="https://dc.stylowamc.pl/" className="flex justify-center basis-1/3 max-lg:hidden">
                     <div className="mr-4">
-                        <div className="font-bold text-lg text-purple-2">5000 UŻYTKOWNIKÓW</div>
+                        <div className="font-bold text-lg text-purple-2">4411 UŻYTKOWNIKÓW</div>
                         <div className="flex justify-end">DC.STYLOWAMC.PL</div>
                     </div>
                     <BsDiscord color="#D4ADFC" size="54px"/>
-                </div>
+                </a>
             </div>
             
             <div className="lg:mx-40 grid grid-cols-1 p-4 gap-2">

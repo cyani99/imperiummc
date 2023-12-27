@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AiFillHome } from "react-icons/ai";
 import {BiSolidLike} from "react-icons/bi";
+import { TiWorld } from "react-icons/ti";
 
 function LargeMenu() {
     const [scrolling, setScrolling] = useState(false);
@@ -26,17 +27,17 @@ function LargeMenu() {
 
   return (
     <div className={menuClasses}>
-      <div className="flex ml-10 m-2 p-2 cursor-pointer">
+      <a href="https://www.stylowamc.pl" className="flex ml-10 m-2 p-2 cursor-pointer">
         <AiFillHome size="25px" />
         <div className="mx-1 text-lg font-bold">Start</div>
-      </div>
-      <div className="flex m-2 bg-purple-3 p-2 rounded-lg px-5 cursor-pointer">
+      </a>
+      <a href="https://vishop.pl/shop/5732/server/5469" className="flex m-2 bg-purple-3 p-2 rounded-lg px-5 cursor-pointer">
         <div className="text-lg font-bold">Sklep</div>
-      </div>
-      <div className="flex m-2 p-2 cursor-pointer">
-        <BiSolidLike size="25px" />
-        <div className="mx-1 text-lg font-bold">Zagłosuj</div>
-      </div>
+      </a>
+      <a href="http://82.118.227.23:81/" className="flex m-2 p-2 cursor-pointer">
+        <TiWorld size="30px" />
+        <div className="mx-1 text-lg font-bold">Mapa</div>
+      </a>
     </div>
   );
 }
