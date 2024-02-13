@@ -17,7 +17,7 @@ function Main() {
         >
           <div className="mr-4">
             <div className="font-bold text-lg text-purple-2">
-              13 GRACZY ONLINE
+              33 GRACZY ONLINE
             </div>
             <div className="flex justify-end">IP: STYLOWAMC.PL</div>
           </div>
@@ -32,7 +32,7 @@ function Main() {
         >
           <div className="mr-4">
             <div className="font-bold text-lg text-purple-2">
-              4411 UŻYTKOWNIKÓW
+              4349 UŻYTKOWNIKÓW
             </div>
             <div className="flex justify-end">DC.STYLOWAMC.PL</div>
           </div>
