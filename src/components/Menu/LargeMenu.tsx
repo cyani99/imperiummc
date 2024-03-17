@@ -39,7 +39,7 @@ function LargeMenu() {
       <motion.a
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        href="https://vishop.pl/shop/5732/server/5469"
+        href="https://www.stylowamc.pl"
         className="flex m-2 bg-purple-3 hover:bg-gold-1 p-2 rounded-lg px-5 cursor-pointer"
       >
         <div className="text-lg font-bold">Sklep</div>
@@ -47,7 +47,7 @@ function LargeMenu() {
       <motion.a
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        href="http://82.118.227.23:81/"
+        href="https://www.stylowamc.pl"
         className="flex m-2 p-2 cursor-pointer"
       >
         <TiWorld size="30px" />
