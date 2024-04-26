@@ -4,23 +4,11 @@ function WelcomeContent() {
   return (
     <div className="basis-2/3 flex flex-col py-3">
       <div className="text-purple-3 font-alegreya font-bold text-4xl">
-        WITAJ NA STYLOWEJ!
+        <span className="text-3xl text-black">Szukajcie aż znajdziecie</span>
       </div>
       <div className="text-base font-inter text-mdr">
-        Przeczytaj nasze serwerowe lore, żeby poznać historię serwera
+        Każda historia się kiedyś kończy tylko po to, żeby inna mogła się zacząć.
       </div>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="flex w-fit my-3 bg-purple-3 p-2 rounded-lg px-8 cursor-pointer max-lg:hidden"
-      >
-        <a
-          href="https://stylowamc.fandom.com/pl/wiki/Stylowamc_Wiki"
-          className="text-lg font-bold "
-        >
-          Lore
-        </a>
-      </motion.div>
     </div>
   );
 }
