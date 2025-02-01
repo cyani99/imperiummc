@@ -5,7 +5,7 @@ function ShopIcon(){
 
     return(
     <div className="flex basis-1/3">
-            <img className="p-6" src={shop_icon}></img>
+            <img alt="Shop" className="p-6" src={shop_icon}></img>
     </div>
     )
 }
