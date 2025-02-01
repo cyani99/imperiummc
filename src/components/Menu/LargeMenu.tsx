@@ -6,54 +6,49 @@ import { motion } from "framer-motion";
 function LargeMenu() {
   const [scrolling, setScrolling] = useState(false);
 
-  useEffect((): any => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+  useEffect(() => {
+    const handleScroll = () => setScrolling(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const menuClasses = `flex max-lg:hidden rounded-bl-xl  rounded-br-xl justify-center fixed w-1/2 m-auto inset-x-0 transition duration-300 z-10 ${
-    scrolling ? " bg-gray-800 shadow-xl" : "bg-transparent "
+  // Używamy semantycznego elementu <nav>
+  const menuClasses = `fixed inset-x-0 m-auto w-1/2 flex justify-center rounded-bl-xl rounded-br-xl transition duration-300 z-10 ${
+    scrolling ? "bg-gray-800 shadow-xl" : "bg-transparent"
   }`;
 
   return (
-    <div className={menuClasses}>
+    <nav className={menuClasses} aria-label="Menu nawigacyjne">
       <motion.a
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         href="http://www.stylowamc.pl"
-        className="flex ml-10 m-2 p-2 cursor-pointer"
+        aria-label="Przejdź do strony startowej"
+        className="flex items-center m-2 p-2 cursor-pointer ml-10"
       >
-        <AiFillHome size="25px" />
-        <div className="mx-1 text-lg font-bold">Start</div>
+        <AiFillHome size={25} />
+        <span className="mx-1 text-lg font-bold">Start</span>
       </motion.a>
       <motion.a
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         href="https://www.stylowamc.pl"
-        className="flex m-2 bg-purple-3 hover:bg-gold-1 p-2 rounded-lg px-5 cursor-pointer"
+        aria-label="Przejdź do sklepu"
+        className="flex items-center m-2 p-2 cursor-pointer bg-purple-3 hover:bg-gold-1 rounded-lg px-5"
       >
-        <div className="text-lg font-bold">Sklep</div>
+        <span className="text-lg font-bold">Sklep</span>
       </motion.a>
       <motion.a
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         href="https://www.stylowamc.pl"
-        className="flex m-2 p-2 cursor-pointer"
+        aria-label="Przejdź do mapy"
+        className="flex items-center m-2 p-2 cursor-pointer"
       >
-        <TiWorld size="30px" />
-        <div className="mx-1 text-lg font-bold">Mapa</div>
+        <TiWorld size={30} />
+        <span className="mx-1 text-lg font-bold">Mapa</span>
       </motion.a>
-    </div>
+    </nav>
   );
 }
 

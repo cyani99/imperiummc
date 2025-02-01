@@ -1,3 +1,4 @@
+import React from "react";
 import NewsTab from "../Tabs/NewsTab/NewsTab";
 import ShopTab from "../Tabs/ShopTab/ShopTab";
 import WelcomeTab from "../Tabs/WelcomeTab/WelcomeTab";
@@ -8,46 +9,56 @@ import { motion } from "framer-motion";
 
 function Main() {
   return (
-    <div className="h-full">
-      <div className="flex items-center justify-center ">
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.9 }}
-          className="flex justify-center basis-1/3 max-lg:hidden"
-        >
-          <div className="mr-4">
-            <div className="font-bold text-lg text-purple-2">
-              33 GRACZY ONLINE
+    <div className="min-h-screen flex flex-col">
+      {/* Header */}
+      <header className="py-4">
+        <div className="container mx-auto flex items-center justify-between">
+          {/* Lewy widget (tylko na dużych ekranach) */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            className="hidden lg:flex items-center space-x-2"
+          >
+            <GiConsoleController color="#D4ADFC" size={54} />
+            <div className="text-right">
+              <p className="font-bold text-lg text-purple-2">
+                33 GRACZY ONLINE
+              </p>
+              <p className="text-sm">IP: STYLOWAMC.PL</p>
             </div>
-            <div className="flex justify-end">IP: STYLOWAMC.PL</div>
-          </div>
-          <GiConsoleController color="#D4ADFC" size="54px" />
-        </motion.div>
-        <Logo />
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.9 }}
-          href="https://dc.stylowamc.pl/"
-          className="flex justify-center basis-1/3 max-lg:hidden"
-        >
-          <div className="mr-4">
-            <div className="font-bold text-lg text-purple-2">
-              4349 UŻYTKOWNIKÓW
-            </div>
-            <div className="flex justify-end">DC.STYLOWAMC.PL</div>
-          </div>
-          <BsDiscord color="#D4ADFC" size="54px" />
-        </motion.a>
-      </div>
+          </motion.div>
 
-      <div className="lg:mx-40 grid grid-cols-1 p-4 gap-2">
-        <div className="lg:flex ">
+          {/* Logo w centrum */}
+          <div className="flex justify-center flex-grow">
+            <Logo />
+          </div>
+
+          {/* Prawy widget (tylko na dużych ekranach) */}
+          <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            href="https://dc.stylowamc.pl/"
+            className="hidden lg:flex items-center space-x-2"
+          >
+            <BsDiscord color="#D4ADFC" size={54} />
+            <div className="text-left">
+              <p className="font-bold text-lg text-purple-2">
+                4349 UŻYTKOWNIKÓW
+              </p>
+              <p className="text-sm">DC.STYLOWAMC.PL</p>
+            </div>
+          </motion.a>
+        </div>
+      </header>
+
+      {/* Główna treść */}
+      <main className="container mx-auto p-4 flex-grow">
+        <div className="lg:flex gap-4 mb-4">
           <WelcomeTab />
           <ShopTab />
         </div>
-
         <NewsTab />
-      </div>
+      </main>
     </div>
   );
 }

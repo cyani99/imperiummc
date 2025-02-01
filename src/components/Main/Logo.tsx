@@ -1,11 +1,11 @@
-import logo from "../../static/img/logo.png"
-function Logo(){
+import logo from "../../static/img/logo.png";
 
-    return(
-    <div className="lg:pt-5 w-100 flex justify-center">
-        <img className="w-80 h-80" src={logo}></img>
+function Logo() {
+  return (
+    <div className="lg:pt-5 w-full flex justify-center">
+      <img className="w-80 h-80" src={logo} alt="Logo" />
     </div>
-    )
+  );
 }
 
 export default Logo;
